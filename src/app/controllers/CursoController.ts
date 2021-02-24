@@ -9,6 +9,28 @@ class CursoController {
 
     return res.status(status).json(data);
   }
+
+  async criarCurso(req: Request, res: Response): Promise<Response> {
+    const { status, data } = await CursoService.criarCurso(req.body);
+
+    return res.status(status).json(data);
+  }
+
+  async alterarCurso(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+
+    const { status, data } = await CursoService.alterarCurso(req.body, id);
+
+    return res.status(status).json(data);
+  }
+
+  async remover(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+
+    const { status, data } = await CursoService.remover(id);
+
+    return res.status(status).json(data);
+  }
 }
 
 export default new CursoController();
