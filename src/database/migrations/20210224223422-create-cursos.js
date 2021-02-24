@@ -1,42 +1,28 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('tb_logins', {
+    return queryInterface.createTable('tb_cursos', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true
       },
-      user_id: {
+      nome: {
+        type: Sequelize.STRING(155),
+        allowNull: false
+      },
+      descricao: {
+        type: Sequelize.STRING(155),
+        allowNull: false
+      },
+      categoria: {
         type: Sequelize.INTEGER,
+        references: { model: 'tb_categorias', key: 'id' },
+        onUpdate: 'CASCADE',
         allowNull: false
       },
-      uuid: {
-        type: Sequelize.STRING(155),
-        allowNull: false
-      },
-      username: {
-        type: Sequelize.STRING(155),
-        allowNull: false
-      },
-      password: {
-        type: Sequelize.STRING(155),
-        allowNull: false
-      },
-      salt: {
-        type: Sequelize.STRING(155),
-        allowNull: false
-      },
-      md5: {
-        type: Sequelize.STRING(155),
-        allowNull: false
-      },
-      sha1: {
-        type: Sequelize.STRING(155),
-        allowNull: false
-      },
-      sha256: {
-        type: Sequelize.STRING(155),
+      url: {
+        type: Sequelize.STRING(255),
         allowNull: false
       },
       criado_em: {
@@ -55,6 +41,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable('tb_logins');
+    return queryInterface.dropTable('tb_cursos');
   }
 };

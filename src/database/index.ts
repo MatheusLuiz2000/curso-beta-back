@@ -1,8 +1,10 @@
 import SQLConfig from '../config/database';
+import Cursos from '../app/models/Cursos';
+import Categorias from '../app/models/Categorias';
 // import mongoose from 'mongoose';
 const Sequelize = require('sequelize');
 
-const models = [];
+const models = [Categorias, Cursos];
 
 class Database {
   connection;
