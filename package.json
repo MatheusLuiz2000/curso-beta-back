@@ -5,11 +5,6 @@
   "main": "server.js",
   "outDir": "./dist",
   "rootDir": "./",
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn version --prepatch --no-git-tag-version && git add ."
-    }
-  },
   "scripts": {
     "dev": "nodemon src/server.ts ",
     "docs": "apidoc -i src/app/docs -o apidoc/ ",
