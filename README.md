@@ -47,7 +47,7 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBj
 # Rotas(BACK-END):
 
 | Rota       	        | Método 	  | Descrição                                               	|  O que enviar                                                |
-|-------------------- |--------	  |---------------------------------------------------------	|                                                              |
+|-------------------- |--------	  |---------------------------------------------------------	|--------------------------------------------------------------|
 | /cursos    	        | GET   	  | Listagem dos cursos por paginação ou filtros              | Nada obrigatório                                             |
 | /curso/:id    	    | GET   	  | Listagem de um curso identificado por ID                  | ID do curso é obrigatório                                    |
 | /categorias    	    | GET   	  | Listagem de categorias                                    | Nada obrigatório                                             |
