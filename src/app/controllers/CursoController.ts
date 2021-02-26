@@ -5,7 +5,15 @@ import CursoService from '../services/CursoService';
 
 class CursoController {
   async listar(req: Request, res: Response): Promise<Response> {
-    const { status, data } = await CursoService.listar();
+    const { status, data } = await CursoService.listar(req.query);
+
+    return res.status(status).json(data);
+  }
+
+  async listarCurso(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+
+    const { status, data } = await CursoService.listarCurso(id);
 
     return res.status(status).json(data);
   }

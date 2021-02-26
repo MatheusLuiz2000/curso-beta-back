@@ -9,7 +9,8 @@ class Cursos extends Model {
         nome: Sequelize.STRING(155),
         descricao: Sequelize.STRING(155),
         categoria: Sequelize.INTEGER,
-        url: Sequelize.STRING(155)
+        url: Sequelize.STRING(155),
+        desativado_em: Sequelize.DATE
       },
       {
         sequelize,
@@ -20,6 +21,13 @@ class Cursos extends Model {
     );
 
     return this;
+  }
+
+  static associate(models) {
+    this.belongsTo(models.Categorias, {
+      foreignKey: 'categoria',
+      as: 'categorias'
+    });
   }
 }
 
