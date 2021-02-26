@@ -36,8 +36,8 @@ class CursoService {
           }
         }
       ],
-      limit: parseInt(query.limit, 10),
-      offset: parseInt(query.offset, 10)
+      limit: query.limit ? parseInt(query.limit, 10) : 5,
+      offset: query.offset ? parseInt(query.offset, 10) : 0
     });
 
     return {
