@@ -140,8 +140,6 @@ class CursoService {
       };
     }
 
-    console.log(busca);
-
     busca.update({
       desativado_em: new Date()
     });
