@@ -44,17 +44,17 @@ Colocar em todos os headers para todas as rotas: Authorization : Bearer TOKEN
 # Exemplo Autenticação
 Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBjdXJzb2JldGEuY29tIiwiaWF0IjoxNjE0MzcwODQ4fQ.5arzi-MefIV-nmf-Zj4kEobJZ1loP8-vvQ_1b54Vj7g
 
-## Rotas(BACK-END):
+# Rotas(BACK-END):
 
-| Rota       	        | Método 	  | Descrição                                               	|
-|-------------------- |--------	  |---------------------------------------------------------	|
-| /cursos    	        | GET   	  | Listagem dos cursos por paginação ou filtros              |
-| /curso/:id    	    | GET   	  | Listagem de um curso identificado por ID                  |
-| /categorias    	    | GET   	  | Listagem de categorias                                    |
-| /cursos    	        | POST   	  | Criar um curso novo                                       |
-| /curso/:id    	    | PATCH   	| Alterar curso criado pelo ID                              |
-| /curso/:id    	    | DELETE   	| Deletar curso pelo ID                                     |
-| /logar   	          | POST   	  | Entrar no sistema                                         |
+| Rota       	        | Método 	  | Descrição                                               	|  O que enviar                                                |
+|-------------------- |--------	  |---------------------------------------------------------	|                                                              |
+| /cursos    	        | GET   	  | Listagem dos cursos por paginação ou filtros              | Nada obrigatório                                             |
+| /curso/:id    	    | GET   	  | Listagem de um curso identificado por ID                  | ID do curso é obrigatório                                    |
+| /categorias    	    | GET   	  | Listagem de categorias                                    | Nada obrigatório                                             |
+| /cursos    	        | POST   	  | Criar um curso novo                                       | Passar um objeto com nome, descricao, categoria(Number), url |
+| /curso/:id    	    | PATCH   	| Alterar curso criado pelo ID                              | Passar um objeto com nome, descricao, categoria(Number), url |
+| /curso/:id    	    | DELETE   	| Deletar curso pelo ID                                     | Passar o ID do curso                                         |
+| /logar   	          | POST   	  | Entrar no sistema                                         | Passar email e senha passados em cima                        | 
 
 # Finalização
 
