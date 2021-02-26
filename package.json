@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "",
   "main": "server.js",
+  "outDir": "./dist",
+  "rootDir": "./",
   "husky": {
     "hooks": {
       "pre-commit": "yarn version --prepatch --no-git-tag-version && git add ."

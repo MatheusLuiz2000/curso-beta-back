@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 import CategoriasService from '../services/CategoriasService';
 
 class CategoriasController {
-  async listar(req: Request, res: Response): Promise<Response> {
+  async listar(req, res) {
     const { status, data } = await CategoriasService.listar();
 
     return res.status(status).json(data);

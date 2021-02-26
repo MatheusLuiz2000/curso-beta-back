@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 import LoginService from '../services/LoginService';
 
 class LoginController {
-  async logar(req: Request, res: Response): Promise<Response> {
+  async logar(req, res) {
     const { email, senha } = req.body;
 
     const { status, data } = await LoginService.logar(email, senha);

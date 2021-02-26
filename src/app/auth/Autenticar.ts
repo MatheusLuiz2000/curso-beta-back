@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-export default async function(req: Request, res: Response, next: NextFunction) {
+export default async function(req, res, next): Promise<Response> {
   const { authorization } = req.headers;
 
   if (!authorization) {

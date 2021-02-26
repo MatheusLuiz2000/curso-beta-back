@@ -4,13 +4,13 @@ import { Request, Response } from 'express';
 import CursoService from '../services/CursoService';
 
 class CursoController {
-  async listar(req: Request, res: Response): Promise<Response> {
+  async listar(req, res) {
     const { status, data } = await CursoService.listar(req.query);
 
     return res.status(status).json(data);
   }
 
-  async listarCurso(req: Request, res: Response): Promise<Response> {
+  async listarCurso(req, res) {
     const { id } = req.params;
 
     const { status, data } = await CursoService.listarCurso(id);
@@ -18,13 +18,13 @@ class CursoController {
     return res.status(status).json(data);
   }
 
-  async criarCurso(req: Request, res: Response): Promise<Response> {
+  async criarCurso(req, res) {
     const { status, data } = await CursoService.criarCurso(req.body);
 
     return res.status(status).json(data);
   }
 
-  async alterarCurso(req: Request, res: Response): Promise<Response> {
+  async alterarCurso(req, res) {
     const { id } = req.params;
 
     const { status, data } = await CursoService.alterarCurso(req.body, id);
@@ -32,7 +32,7 @@ class CursoController {
     return res.status(status).json(data);
   }
 
-  async remover(req: Request, res: Response): Promise<Response> {
+  async remover(req, res) {
     const { id } = req.params;
 
     const { status, data } = await CursoService.remover(id);

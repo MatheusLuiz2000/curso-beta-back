@@ -13,7 +13,7 @@ import LoginController from './app/controllers/LoginController';
 // Auth
 import Autenticar from './app/auth/Autenticar';
 
-const routes = new Router();
+const routes = express.Router();
 
 routes.get('/health', (req, res) => {
   return res.json({ ok: true });
