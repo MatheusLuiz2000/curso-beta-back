@@ -17,7 +17,7 @@ DB_NAME=cursos_db<br />
 # Executar
 yarn para instalar as dependencias<br />
 Criar um banco de dados(Sequelize não cria o banco pelas migrations)<br />
-Comandos para rodar(em order):
+Comandos para rodar(em order):<br />
 CREATE DATABASE `cursos_db`   (Comando para criar o banco)(Rodar no seu banco local)  <br />
 yarn sequelize db:migrate     (Comando para gerar todas as tabelas do banco) <br />
 yarn sequelize db:seed:all    (Comando parar gerar os dados nas tabelas(Categorias e Adm))<br />
