@@ -1,13 +1,27 @@
 # Cursos Beta
 Front realizado para avaliação técnica.<br />
+
+# Instruções em ordem para realizar(Rodar o projeto)
+# ENV para rodar o Projeto(Basta criar um arquivo .env e colocar essas informações ou copiar do .ENV.EXAMPLE)
+NOME_SERVICO = cursos-beta-back<br />
+KEY = cursos-beta-back-key<br />
+PORT=4020<br />
+NODE_ENV=develop<br />
+<br />
+DB_DIALECT=mysql<br />
+DB_HOST=localhost<br />
+DB_USER=root<br />
+DB_PASS=<br />
+DB_NAME=cursos_db<br />
+
 # Executar
 yarn para instalar as dependencias<br />
-yarn dev para iniciar o projeto<br />
 Criar um banco de dados(Sequelize não cria o banco pelas migrations)<br />
 Comandos para rodar(em order):
-CREATE DATABASE `cursos_db`   (Comando para criar o banco)  <br />
+CREATE DATABASE `cursos_db`   (Comando para criar o banco)(Rodar no seu banco local)  <br />
 yarn sequelize db:migrate     (Comando para gerar todas as tabelas do banco) <br />
 yarn sequelize db:seed:all    (Comando parar gerar os dados nas tabelas(Categorias e Adm))<br />
+yarn dev para iniciar o projeto<br />
 
 
 # Informações importantes
@@ -42,17 +56,6 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBj
 | /curso/:id    	    | DELETE   	| Deletar curso pelo ID                                     |
 | /logar   	          | POST   	  | Entrar no sistema                                         |
 
-# ENV para rodar o Projeto(Basta criar um arquivo .env e colocar essas informações ou copiar do .ENV.EXAMPLE)
-NOME_SERVICO = cursos-beta-back<br />
-KEY = cursos-beta-back-key<br />
-PORT=4020<br />
-NODE_ENV=develop<br />
-<br />
-DB_DIALECT=mysql<br />
-DB_HOST=localhost<br />
-DB_USER=root<br />
-DB_PASS=<br />
-DB_NAME=cursos_db<br />
 # Finalização
 
 Qualquer dúvida, estou a disposição em (11) 9404-98448
