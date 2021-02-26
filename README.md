@@ -3,6 +3,13 @@ Front realizado para avaliação técnica.<br />
 # Executar
 yarn para instalar as dependencias<br />
 yarn dev para iniciar o projeto<br />
+Criar um banco de dados(Sequelize não cria o banco pelas migrations)<br />
+Comandos para rodar(em order):
+CREATE DATABASE `cursos_db`   (Comando para criar o banco)  <br />
+yarn sequelize db:migrate     (Comando para gerar todas as tabelas do banco) <br />
+yarn sequelize db:seed:all    (Comando parar gerar os dados nas tabelas(Categorias e Adm))<br />
+
+
 # Informações importantes
 Observação: Por hospedar na Heroku(Serviço gratuito) e fazer conexão com meu banco Mysql, pode existir lentidão nas operações
 
